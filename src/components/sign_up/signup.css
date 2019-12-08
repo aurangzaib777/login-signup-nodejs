@@ -1,0 +1,19 @@
+@media (max-width: 769px) {
+  .headRes {
+    font-size: 6vw !important;
+  }
+  .inputRes,
+  .fileRes {
+    width: 50vw !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .headRes {
+    font-size: 10vw !important;
+  }
+  .inputRes,
+  .fileRes {
+    width: 77vw !important;
+  }
+}

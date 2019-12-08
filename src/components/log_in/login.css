@@ -1,0 +1,11 @@
+@media (max-width: 769px) {
+  .inputRes {
+    width: 50vw !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .inputRes {
+    width: 80vw !important;
+  }
+}
