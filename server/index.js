@@ -23,7 +23,7 @@ mongoose
 // routes
 app.use("/user", route);
 
-app.use(express.static(path.resolve(__dirname, "../server")));
+app.use(express.static(path.resolve(__dirname, "./build")));
 
 // Port
 const PORT = process.env.PORT || 5000;

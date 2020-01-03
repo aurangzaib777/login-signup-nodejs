@@ -47,7 +47,6 @@ const SignUp = props => {
   });
   let [file, setFile] = useState("");
   let [msg, setMsg] = useState("");
-  console.log(inputValues);
   const handleChange = event => {
     setInputValues({ ...inputValues, [event.target.name]: event.target.value });
   };
@@ -60,10 +59,10 @@ const SignUp = props => {
     data.append("password", inputValues.pass);
     data.append("gender", inputValues.gender);
     data.append("files", file);
-    console.log(data);
-    Axios.post("http://localhost:5000/user/register", data).then(res =>
-      setMsg(res.data)
-    );
+    Axios.post(
+      "https://loginandregistrationform.herokuapp.com/user/register",
+      data
+    ).then(res => setMsg(res.data));
     if (msg === "") {
       props.history.push("/login");
     }
@@ -72,7 +71,6 @@ const SignUp = props => {
     alert("password doesn't match");
   };
   const handleChangeFile = e => {
-    console.log(e.target.files[0]);
     if (e.target.files[0]) {
       setFile(e.target.files[0]);
     } else {

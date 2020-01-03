@@ -43,13 +43,11 @@ const LogIn = props => {
   const handlePassword = () => {
     setValue({ ...value, showPassword: !value.showPassword });
   };
-  console.log(props);
   const handleChange = e => {
     const { name, value } = e.target;
     setInputValue({ ...inputValue, [name]: value });
   };
   let [dataForward, setData] = useState([]);
-  console.log(dataForward);
   const handleClick = e => {
     e.preventDefault();
 
@@ -57,14 +55,18 @@ const LogIn = props => {
       email: inputValue.email,
       password: inputValue.password
     };
-    Axios.post("http://localhost:5000/user/login", data).then(res => {
+    Axios.post(
+      "https://loginandregistrationform.herokuapp.com/user/login",
+      data
+    ).then(res => {
       Axios.defaults.headers["Authorization"] = res.data;
       localStorage.setItem("authorization", res.data);
-      Axios.post("http://localhost:5000/user/me").then(res => {
-        setData([res.data]);
-      });
+      Axios.post("https://loginandregistrationform.herokuapp.com/user/me").then(
+        res => {
+          setData([res.data]);
+        }
+      );
       setMsg(res.data);
-      console.log(res.data);
       if (res.data === "Password doesn't match") {
         alert(`Password doesn't match`);
       } else if (res.data === "user not found") {

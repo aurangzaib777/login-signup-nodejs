@@ -1,0 +1,1 @@
+{"version":3,"sources":["login.css"],"names":[],"mappings":"AAAA,yBACE,UACE,oBACF,CACF,CAEA,yBACE,UACE,oBACF,CACF","file":"6.c5d05a0e.chunk.css","sourcesContent":["@media (max-width: 769px) {\r\n  .inputRes {\r\n    width: 50vw !important;\r\n  }\r\n}\r\n\r\n@media (max-width: 426px) {\r\n  .inputRes {\r\n    width: 80vw !important;\r\n  }\r\n}\r\n"]}

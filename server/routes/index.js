@@ -9,7 +9,7 @@ const regSchema = require("../models/registration");
 // Storage
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, "./server/uploads");
+    cb(null, "./build/uploads");
   },
   filename: function(req, file, cb) {
     cb(null, file.fieldname + "-" + file.originalname);
